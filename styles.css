@@ -539,6 +539,28 @@ h3 {
   margin-top: 0;
 }
 
+.contact-email {
+  width: fit-content;
+  margin-top: 18px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--deep);
+  font-weight: 800;
+}
+
+.button.secondary.copied {
+  border-color: var(--teal);
+  background: #e8f2f0;
+  color: var(--teal);
+}
+
+button.button {
+  cursor: pointer;
+  font: inherit;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
