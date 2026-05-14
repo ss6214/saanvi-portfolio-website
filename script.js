@@ -77,3 +77,23 @@ function drawTrafficChart() {
 
 drawTrafficChart();
 window.addEventListener("resize", drawTrafficChart);
+
+const copyEmailButton = document.querySelector("[data-copy-email]");
+
+if (copyEmailButton) {
+  copyEmailButton.addEventListener("click", async () => {
+    const email = copyEmailButton.dataset.copyEmail;
+
+    try {
+      await navigator.clipboard.writeText(email);
+      copyEmailButton.textContent = "Copied";
+      copyEmailButton.classList.add("copied");
+      setTimeout(() => {
+        copyEmailButton.textContent = "Copy email";
+        copyEmailButton.classList.remove("copied");
+      }, 1800);
+    } catch {
+      window.prompt("Copy this email address:", email);
+    }
+  });
+}
